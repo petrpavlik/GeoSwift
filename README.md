@@ -14,3 +14,18 @@ do {
     // Tried to create an instance of `GeoCoordinate2D` with invalid coordinates.
 }
 ```
+
+## Installation
+
+### Swift Package Manager
+```Swift
+.Package(url: "https://github.com/petrpavlik/GeoSwift.git", majorVersion: 1)
+```
+
+### License
+MIT
+
+### Author
+Petr Pavlik - [@ptrpavlik](https://twitter.com/ptrpavlik)
+
+
