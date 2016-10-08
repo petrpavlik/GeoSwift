@@ -1,6 +1,12 @@
 # GeoSwift
 Location-related APIs intended to be used by server-side Swift applications since there is no `CoreLocation` on Linux.
 
+[![Build Status](https://travis-ci.org/petrpavlik/GeoSwift.svg?branch=master)](https://travis-ci.org/petrpavlik/GeoSwift)
+[![Latest Release](https://img.shields.io/github/release/petrpavlik/GeoSwift.svg)](https://github.com/petrpavlik/GeoSwift/releases/latest)
+![Platforms](https://img.shields.io/badge/platforms-Linux%20%7C%20OS%20X-blue.svg)
+![Package Managers](https://img.shields.io/badge/package%20managers-SwiftPM-yellow.svg)
+
+
 ## Distance between 2 locations
 
 ```swift
