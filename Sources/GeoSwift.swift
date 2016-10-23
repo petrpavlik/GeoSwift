@@ -65,7 +65,7 @@ public extension GeoCoordinate2D {
         let Δφ = (from.latitude-latitude) * Double.pi / 180
         let Δλ = (from.longitude-longitude) * Double.pi / 180
         
-        // Broken into 2 expressions to avoid 'expression to complex' error on linux
+        // Broken into 2 expressions to avoid 'expression too complex' error on linux
         var a = sin(Δφ/2) * sin(Δφ/2)
         a += cos(φ1) * cos(φ2) * sin(Δλ/2) * sin(Δλ/2)
         
