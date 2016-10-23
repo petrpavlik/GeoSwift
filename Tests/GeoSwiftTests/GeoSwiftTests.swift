@@ -19,6 +19,7 @@ class GeoSwiftTests: XCTestCase {
         }
         
         do {
+            // TODO: Turn this into individual tests.
             _ = try GeoCoordinate2D(latitude: 91, longitude: 14.4207600)
             _ = try GeoCoordinate2D(latitude: -91, longitude: 14.4207600)
             _ = try GeoCoordinate2D(latitude: 50.0880400, longitude: 181)
