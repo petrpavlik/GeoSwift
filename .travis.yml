@@ -1,10 +1,18 @@
 os:
-  - linux
-  - osx
+    - linux
 language: generic
 sudo: required
 dist: trusty
-osx_image: xcode8
+
+before_install:
+    - eval "$(curl -sL https://apt.vapor.sh)"
+    - sudo apt-get install vapor
+    - sudo chmod -R a+rx /usr/
+
 script:
-  - eval "$(curl -sL https://swift.vapor.sh/ci)"
-  - eval "$(curl -sL https://swift.vapor.sh/codecov)"
+    - swift build
+    - swift build -c release
+    - swift test
+
+after_success:
+    - eval "$(curl -sL https://swift.vapor.sh/codecov)"
