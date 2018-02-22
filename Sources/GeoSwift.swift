@@ -38,7 +38,7 @@ public struct GeoCoordinate2D {
     let latitude: Double
     let longitude: Double
     
-    init(latitude: Double, longitude: Double) throws {
+    public init(latitude: Double, longitude: Double) throws {
         
         guard abs(latitude) <= 90 else {
             throw GeoCoordinate2DError.invalidLatitude
