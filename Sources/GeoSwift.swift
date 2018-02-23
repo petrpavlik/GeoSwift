@@ -35,8 +35,8 @@ public enum GeoCoordinate2DError: Error {
 
 /// Represents a valid location coordinate. Initializer throws `GeoCoordinate2DError` error in case of an attempt to create an instance with invalid coordinates.
 public struct GeoCoordinate2D {
-    let latitude: Double
-    let longitude: Double
+    public let latitude: Double
+    public let longitude: Double
     
     public init(latitude: Double, longitude: Double) throws {
         
