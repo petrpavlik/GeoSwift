@@ -5,6 +5,7 @@ sudo: required
 dist: trusty
 
 install:
+  - sudo chmod -R a+rx /usr/
   - node -v
   - npm install -g danger
   - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
