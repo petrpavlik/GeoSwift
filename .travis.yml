@@ -43,4 +43,4 @@ install:
 
 script:
     - swift test
-    # - danger process danger-swift           # Run Danger
+    - danger process danger-swift           # Run Danger
