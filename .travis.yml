@@ -8,6 +8,9 @@ before_install:
     - eval "$(curl -sL https://apt.vapor.sh)"
     - sudo apt-get install vapor
     - sudo chmod -R a+rx /usr/
+    - npm install -g danger # This installs Danger
+    - brew install danger/tap/danger-swift # This installs Danger-Swift
+    - brew install swiftlint # This is for the Danger SwiftLint plugin.
 
 script:
     - swift build
