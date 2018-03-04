@@ -1,5 +1,6 @@
 import PackageDescription
 
 let package = Package(
-    name: "GeoSwift"
+    name: "GeoSwift",
+    exclude: ["Dangerfile.swift"]
 )
