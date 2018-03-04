@@ -21,11 +21,11 @@ install:
   - mv .build/x86_64-unknown-linux/release/swiftlint /usr/local/bin/
   - cd ..
 
-  - git clone https://github.com/petrpavlik/danger-swift.git
-  - cd danger-swift
-  - rm .swift-version
-  - make install
-  - cd ..
+  # - git clone https://github.com/petrpavlik/danger-swift.git
+  # - cd danger-swift
+  # - rm .swift-version
+  # - make install
+  # - cd ..
   
   - swift build 
 
@@ -33,4 +33,4 @@ script:
     - swift test
     - export LINUX_SOURCEKIT_LIB_PATH=$HOME/usr/lib
     - swiftlint lint --quiet --path "danger/Dangerfile.swift" --reporter json # test swiftlint
-    - danger process danger-swift           # Run Danger
+    # - danger process danger-swift           # Run Danger
