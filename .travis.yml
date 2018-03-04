@@ -43,4 +43,4 @@ install:
 
 script:
     - swift test
-    - sudo danger process danger-swift           # Run Danger
+    - danger process danger-swift           # Run Danger
