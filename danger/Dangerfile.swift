@@ -1,8 +1,8 @@
 // Dangerfile.swift
 
 import Danger
-// import DangerSwiftLint // package: https://github.com/ashfurrow/DangerSwiftLint.git
+import DangerSwiftLint // package: https://github.com/ashfurrow/DangerSwiftLint.git
 
-// SwiftLint.lint()
+SwiftLint.lint()
 
 message("It works!")
