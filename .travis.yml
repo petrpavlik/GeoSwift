@@ -4,13 +4,15 @@ language: generic
 sudo: required
 dist: trusty
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y clang libblocksruntime0 libcurl4-openssl-dev
+
 install:
   - sudo chmod -R a+rwx /usr/
   # - sudo chmod -R a+rwx /tmp/
   - node -v
   - npm install -g danger
-  - apt-get update
-  - apt-get install -y clang libblocksruntime0 libcurl4-openssl-dev
   - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
   - swiftenv global 4.0.3
 
