@@ -7,8 +7,6 @@ dist: trusty
 install:
   - sudo chmod -R a+rwx /usr/
   # - sudo chmod -R a+rwx /tmp/
-  - node -v
-  - npm install -g danger
   - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
   - swiftenv global 4.0.3
 
@@ -18,29 +16,9 @@ install:
   - swift build -c release --static-swift-stdlib
   - mv .build/x86_64-unknown-linux/release/swiftlint /usr/local/bin/
   - cd ..
-
-  - git clone https://github.com/petrpavlik/danger-swift.git
-  - cd danger-swift
-  - rm .swift-version
-  - make install
-  - cd ..
   
   - swift build 
 
-# before_install:
-#     - eval "$(curl -sL https://apt.vapor.sh)"
-#     - sudo apt-get install vapor
-#     - sudo chmod -R a+rx /usr/
-    
-#     - git clone https://github.com/realm/SwiftLint.git
-#     - cd SwiftLint
-#     - swift build -c release --static-swift-stdlib
-#     - mv .build/x86_64-unknown-linux/release/swiftlint /usr/local/bin/
-#     - cd ..
-#     # - npm install -g danger # This installs Danger
-#     # - brew install danger/tap/danger-swift # This installs Danger-Swift
-#     # - brew install swiftlint # This is for the Danger SwiftLint plugin.
-
 script:
     - swift test
-    - sudo danger process danger-swift           # Run Danger
+    - bundle exec danger           # Run Danger
