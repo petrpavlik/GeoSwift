@@ -43,4 +43,5 @@ install:
 
 script:
     - swift test
+    - swiftlint lint --quiet --path "danger/Dangerfile.swift" --reporter json # test swiftlint
     - danger process danger-swift           # Run Danger
