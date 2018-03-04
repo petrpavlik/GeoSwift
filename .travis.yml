@@ -31,21 +31,8 @@ install:
   
   - swift build 
 
-# before_install:
-#     - eval "$(curl -sL https://apt.vapor.sh)"
-#     - sudo apt-get install vapor
-#     - sudo chmod -R a+rx /usr/
-    
-#     - git clone https://github.com/realm/SwiftLint.git
-#     - cd SwiftLint
-#     - swift build -c release --static-swift-stdlib
-#     - mv .build/x86_64-unknown-linux/release/swiftlint /usr/local/bin/
-#     - cd ..
-#     # - npm install -g danger # This installs Danger
-#     # - brew install danger/tap/danger-swift # This installs Danger-Swift
-#     # - brew install swiftlint # This is for the Danger SwiftLint plugin.
-
 script:
     - swift test
+    - export LINUX_SOURCEKIT_LIB_PATH=$HOME/usr/lib
     - swiftlint lint --quiet --path "danger/Dangerfile.swift" --reporter json # test swiftlint
     - danger process danger-swift           # Run Danger
