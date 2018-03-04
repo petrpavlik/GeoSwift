@@ -21,4 +21,6 @@ install:
 
 script:
     - swift test
+
+    - bundle install
     - bundle exec danger           # Run Danger
