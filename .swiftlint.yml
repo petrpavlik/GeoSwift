@@ -2,8 +2,8 @@ disabled_rules: # rule identifiers to exclude from running
   - fallthrough
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - danger
-  - Package.swift
+  # - danger
+  # - Package.swift
 
 force_cast: warning # implicitly
 force_try: warning
