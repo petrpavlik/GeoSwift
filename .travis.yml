@@ -37,4 +37,4 @@ script:
     # - swiftlint lint --quiet --path "danger/Dangerfile.swift" --reporter json # test swiftlint
     # - danger process danger-swift           # Run Danger
 
-    find / -name libsourcekitdInProc.so
+    - find / -name libsourcekitdInProc.so
