@@ -16,6 +16,8 @@ install:
   - eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
   - swiftenv global 4.0.3
 
+  - sudo find / -name libsourcekitdInProc.so
+
   # - git clone https://github.com/realm/SwiftLint.git
   # - cd SwiftLint
   # - rm .swift-version
@@ -36,5 +38,3 @@ script:
     # - export LINUX_SOURCEKIT_LIB_PATH=$HOME/usr/lib
     # - swiftlint lint --quiet --path "danger/Dangerfile.swift" --reporter json # test swiftlint
     # - danger process danger-swift           # Run Danger
-
-    - find / -name libsourcekitdInProc.so
