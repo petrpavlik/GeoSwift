@@ -8,7 +8,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "GeoSwift", path: "./"),
+            name: "GeoSwift"),
         .testTarget(
             name: "GeoSwiftTests",
             dependencies: ["GeoSwift"]),
