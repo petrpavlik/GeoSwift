@@ -1,18 +1,11 @@
-os:
-    - linux
-language: generic
-sudo: required
-dist: trusty
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
 
 before_install:
-    - eval "$(curl -sL https://apt.vapor.sh)"
-    - sudo apt-get install vapor
-    - sudo chmod -R a+rx /usr/
+  - git clone https://github.com/IBM-Swift/Package-Builder.git
 
 script:
-    - swift build
-    - swift build -c release
-    - swift test
-
-after_success:
-    - eval "$(curl -sL https://swift.vapor.sh/codecov)"
+  - ./Package-Builder/build-package.sh -projectDir $TRAVIS_BUILD_DIR
